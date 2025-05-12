@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clicker.Bombardino"
+             Title="Bombardino"
+             BackgroundColor="DarkGray">
+
+    <FlexLayout
+        AlignContent="Center"
+        AlignItems="Center"
+        WidthRequest="400"
+        HeightRequest="400"
+        Direction="Column"
+>
+        <StackLayout
+                WidthRequest="612"
+                HeightRequest="80"
+                BackgroundColor="Blue"
+            >
+            <Label
+                    HorizontalTextAlignment="Start"
+                    Text="Italian brainrot clicker"
+                    WidthRequest="300"
+                    HeightRequest="25"
+                    FontFamily="Comic Sans MS"
+                    FontSize="15"
+                    TextColor="White"
+                    VerticalTextAlignment="Start"
+                    Margin="-5"
+                    TranslationX="-15"
+                    TranslationY="5"
+                />
+            <Label
+                    HorizontalTextAlignment="End"
+                    Text="Danylo Pavlov"
+                    WidthRequest="300"
+                    HeightRequest="25"
+                    FontFamily="Comic Sans MS"
+                    FontSize="10"
+                    TextColor="White"
+                    VerticalTextAlignment="Start"
+                    Margin="-5"
+                    TranslationX="15"
+                    TranslationY="-5"
+                />
+            <Label
+                    HorizontalTextAlignment="End"
+                    Text=""
+                    x:Name="Monitor"
+                    WidthRequest="280"
+                    HeightRequest="40"
+                    FontFamily="Digital-7 Italic"
+                    FontSize="40"
+                    TextColor="Lime"
+                    BackgroundColor="Black"
+                    VerticalTextAlignment="Start"
+                    Margin="-5"
+                    TranslationX="-30"
+                    TranslationY="5"
+                />
+            <Label
+                    HorizontalTextAlignment="End"
+                    Text="60"
+                    x:Name="TimerMon"
+                    WidthRequest="40"
+                    HeightRequest="40"
+                    FontFamily="Digital-7 Italic"
+                    FontSize="40"
+                    TextColor="Red"
+                    BackgroundColor="Black"
+                    VerticalTextAlignment="Start"
+                    Margin="-5"
+                    TranslationX="150"
+                    TranslationY="-25"
+                />
+        </StackLayout>
+        <StackLayout
+        WidthRequest="612"
+        HeightRequest="412"
+        BackgroundColor="Blue"
+            TranslationY="50"
+        >
+            <Image Source="cloud_612x612.jpg"
+                   WidthRequest="612"
+                   HeightRequest="612"
+                   TranslationY="-100"
+                   x:Name="bg"
+                   ZIndex="-1"/>
+            <ImageButton Source="crocodino.png"
+                         TranslationY="-600"
+                         WidthRequest="300"
+                         HeightRequest="300"
+                         ZIndex="5"
+                         x:Name="clicker"
+                         BackgroundColor="Transparent"
+                         Clicked="OnBombardinoClicked"
+                         >
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                                 Value="1" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Pressed">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                                 Value="0.9" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="PointerOver" />
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </VisualStateManager.VisualStateGroups>
+            </ImageButton>
+        </StackLayout>
+        <StackLayout
+        WidthRequest="612"
+        HeightRequest="140"
+        BackgroundColor="Blue"
+            TranslationY="30"
+        >
+            <ImageButton Source="crocodino.png"
+             TranslationY="0"
+             TranslationX="25"    
+             WidthRequest="100"
+             HeightRequest="100"
+             ZIndex="6"
+             BackgroundColor="Transparent"
+             Clicked="cro"
+             HorizontalOptions="Start"
+             />
+            <ImageButton Source="patapim.png"
+             TranslationY="-100"
+             TranslationX="150"
+             WidthRequest="100"
+             HeightRequest="100"
+             ZIndex="6"
+             BackgroundColor="Transparent"
+             Clicked="brr"
+             HorizontalOptions="Start"
+             />
+            <ImageButton Source="fish.png"
+             TranslationY="-200"
+             TranslationX="250"
+             WidthRequest="100"
+             HeightRequest="100"
+             ZIndex="6"
+             BackgroundColor="Transparent"
+             Clicked="tra"
+             HorizontalOptions="Start"
+             />
+            <ImageButton Source="tung.webp"
+             TranslationY="-300"
+             TranslationX="350"
+             WidthRequest="100"
+             HeightRequest="100"
+             ZIndex="6"
+             BackgroundColor="Transparent"
+             Clicked="tun"
+             HorizontalOptions="Start"
+             />
+            <ImageButton Source="bobr.png"
+             TranslationY="-400"
+             TranslationX="475"
+             WidthRequest="100"
+             HeightRequest="100"
+             ZIndex="6"
+             BackgroundColor="Transparent"
+             Clicked="bob"
+             HorizontalOptions="Start"
+             />
+        </StackLayout>
+    </FlexLayout>
+</ContentPage>
